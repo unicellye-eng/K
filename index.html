@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>وكالة المسوق كونان | رائد التسويق الرقمي في اليمن</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                brown: '#9C522B', // لون العمامة اليمني
+                green: '#1E5128', // لون الجنبية (الخلفية الخضراء)
+                gold: '#D4AF37',  // اللون الذهبي للنص والتطريز
+                cream: '#FDFDFD', // لون الثوب
+                dark: '#0A0A0A'
+              }
+            },
+            animation: {
+              'float': 'float 6s ease-in-out infinite',
+              'glow': 'glow 2s ease-in-out infinite alternate',
+            },
+            keyframes: {
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-20px)' },
+              },
+              glow: {
+                'from': { 'box-shadow': '0 0 10px rgba(212, 175, 55, 0.2)' },
+                'to': { 'box-shadow': '0 0 30px rgba(212, 175, 55, 0.6)' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        font-family: 'Tajawal', sans-serif;
+        scroll-behavior: smooth;
+        background-color: #050505;
+      }
+      .conan-gradient {
+        background: linear-gradient(135deg, #9C522B 0%, #1E5128 100%);
+      }
+      .text-glow {
+        text-shadow: 0 0 15px rgba(212, 175, 55, 0.5);
+      }
+      .glass-card {
+        background: rgba(255, 255, 255, 0.02);
+        backdrop-filter: blur(12px);
+        border: 1px solid rgba(212, 175, 55, 0.1);
+      }
+      /* Custom selection color matching the brand */
+      ::selection {
+        background: #D4AF37;
+        color: #000;
+      }
+    </style>
+
+<link rel="stylesheet" href="/index.css">
+  <script type="importmap">
+{
+  "imports": {
+    "lucide-react": "https://esm.sh/lucide-react@^0.563.0",
+    "@google/genai": "https://esm.sh/@google/genai@^1.40.0",
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react": "https://esm.sh/react@^19.2.4",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/"
+  }
+}
+</script>
+  <script type="module" crossorigin src="/assets/index-QzMXBjOA.js"></script>
+</head>
+  <body class="text-gray-100 overflow-x-hidden">
+    <div id="root"></div>
+</body>
+</html>
