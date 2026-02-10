@@ -1,84 +1,343 @@
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ar" dir="rtl">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>وكالة المسوق كونان | رائد التسويق الرقمي في اليمن</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              brand: {
-                brown: '#9C522B', // لون العمامة اليمني
-                green: '#1E5128', // لون الجنبية (الخلفية الخضراء)
-                gold: '#D4AF37',  // اللون الذهبي للنص والتطريز
-                cream: '#FDFDFD', // لون الثوب
-                dark: '#0A0A0A'
-              }
-            },
-            animation: {
-              'float': 'float 6s ease-in-out infinite',
-              'glow': 'glow 2s ease-in-out infinite alternate',
-            },
-            keyframes: {
-              float: {
-                '0%, 100%': { transform: 'translateY(0)' },
-                '50%': { transform: 'translateY(-20px)' },
-              },
-              glow: {
-                'from': { 'box-shadow': '0 0 10px rgba(212, 175, 55, 0.2)' },
-                'to': { 'box-shadow': '0 0 30px rgba(212, 175, 55, 0.6)' },
-              }
-            }
-          }
-        }
-      }
-    </script>
-    <style>
-      body {
-        font-family: 'Tajawal', sans-serif;
-        scroll-behavior: smooth;
-        background-color: #050505;
-      }
-      .conan-gradient {
-        background: linear-gradient(135deg, #9C522B 0%, #1E5128 100%);
-      }
-      .text-glow {
-        text-shadow: 0 0 15px rgba(212, 175, 55, 0.5);
-      }
-      .glass-card {
-        background: rgba(255, 255, 255, 0.02);
-        backdrop-filter: blur(12px);
-        border: 1px solid rgba(212, 175, 55, 0.1);
-      }
-      /* Custom selection color matching the brand */
-      ::selection {
-        background: #D4AF37;
-        color: #000;
-      }
-    </style>
-
-<link rel="stylesheet" href="/index.css">
-  <script type="importmap">
-{
-  "imports": {
-    "lucide-react": "https://esm.sh/lucide-react@^0.563.0",
-    "@google/genai": "https://esm.sh/@google/genai@^1.40.0",
-    "react/": "https://esm.sh/react@^19.2.4/",
-    "react": "https://esm.sh/react@^19.2.4",
-    "react-dom/": "https://esm.sh/react-dom@^19.2.4/"
-  }
-}
-</script>
-  <script type="module" crossorigin src="/assets/index-QzMXBjOA.js"></script>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>المسوق كونان</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
-  <body class="text-gray-100 overflow-x-hidden">
-    <div id="root"></div>
+<body>
+    <header class="header">
+    <div class="container header__inner">
+      <a class="brand" href="#">
+        <img src="logo.png" alt="شعار المسوق كونان" class="brand__logo" />
+        <div class="brand__text">
+          <div class="brand__name">المسوق كونان</div>
+          <div class="brand__tag">وكالة تسويق رقمي • تصميم • إدارة حملات</div>
+        </div>
+      </a>
+
+      <input id="menuToggle" class="menuToggle" type="checkbox" />
+      <label class="menuBtn" for="menuToggle" aria-label="فتح القائمة">
+        <span></span><span></span><span></span>
+      </label>
+
+      <nav class="nav" aria-label="القائمة">
+        <a href="#services">الخدمات</a>
+        <a href="#work">أعمالنا</a>
+        <a href="#contact" class="nav__cta">تواصل معنا</a>
+      </nav>
+    </div>
+  </header>
+
+
+  <main>
+    <section class="hero">
+      <div class="container hero__inner">
+        <div class="hero__copy">
+          <h1>شهرة تصنعها الأفكار… لا الصدف</h1>
+          <p>
+            نساعدك على بناء هوية قوية وزيادة مبيعاتك عبر محتوى احترافي، إعلانات مدفوعة، وتصميمات متناسقة مع علامتك.
+          </p>
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="#contact">اطلب استشارة</a>
+            <a class="btn btn--ghost" href="#services">استعراض الخدمات</a>
+          </div>
+
+          <div class="stats">
+            <div class="stat"><span>+100</span><small>فكرة محتوى</small></div>
+            <div class="stat"><span>+50</span><small>حملة إعلانية</small></div>
+            <div class="stat"><span>+30</span><small>هوية بصرية</small></div>
+          </div>
+        </div>
+
+        <div class="hero__card">
+          <div class="card">
+            <div class="card__title">جاهز نرفع نتائجك؟</div>
+            <div class="card__text">اكتب لنا تفاصيل مشروعك وسنقترح خطة مناسبة خلال وقت قصير.</div>
+            <a class="btn btn--primary btn--block" href="#contact">ابدأ الآن</a>
+            <div class="card__hint">رد سريع • خطة واضحة • تنفيذ احترافي</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="section">
+      <div class="container">
+        <div class="section__head">
+          <h2>خدماتنا</h2>
+          <p>كل ما تحتاجه لتنمو علامتك… في مكان واحد.</p>
+        </div>
+
+        <div class="grid">
+          <div class="tile">
+            <h3>إعلانات مدفوعة</h3>
+            <p>إعداد وإدارة حملات مع تتبع وقياس وتحسين مستمر لتحقيق أفضل عائد.</p>
+          </div>
+          <div class="tile">
+            <h3>تصميم وهوية</h3>
+            <p>هوية متناسقة، منشورات احترافية، وواجهات تعكس شخصية علامتك بوضوح.</p>
+          </div>
+          <div class="tile">
+            <h3>إدارة محتوى</h3>
+            <p>خطة محتوى + كتابة + تصميم + نشر… بأسلوب يرفع التفاعل ويزيد الثقة.</p>
+          </div>
+          <div class="tile">
+            <h3>صفحات هبوط</h3>
+            <p>صفحات سريعة وجذابة تُحوّل الزوار إلى عملاء مع تجربة مستخدم ممتازة.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="work" class="section section--alt">
+      <div class="container">
+        <div class="section__head">
+          <h2>لمحة سريعة</h2>
+          <p>شغل نظيف… ونتائج قابلة للقياس.</p>
+        </div>
+
+        <div class="work">
+          <div class="work__item">
+            <div class="work__kpi"><span>زيادة</span><strong>التفاعل</strong></div>
+            <p>تحسين أسلوب المحتوى وتناسق الهوية لرفع التفاعل وبناء مجتمع حول العلامة.</p>
+          </div>
+          <div class="work__item">
+            <div class="work__kpi"><span>تحسين</span><strong>التحويل</strong></div>
+            <p>تهيئة صفحات الهبوط والعروض، وربطها بحملات إعلانية لزيادة الطلبات.</p>
+          </div>
+          <div class="work__item">
+            <div class="work__kpi"><span>خفض</span><strong>التكلفة</strong></div>
+            <p>تحسين الاستهداف والإعلانات وإعادة التسويق لتقليل تكلفة العميل.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="contact">
+          <div class="contact__copy">
+            <h2>تواصل معنا</h2>
+            <p>أرسل لنا فكرتك وسنقترح أفضل خطة تناسب ميزانيتك وهدفك.</p>
+            <div class="contact__chips">
+              <span>تسويق رقمي</span><span>تصميم</span><span>حملات</span><span>محتوى</span>
+            </div>
+          </div>
+
+          <div class="contact__card">
+            <div class="card">
+              <div class="field">
+                <label>الاسم</label>
+                <input type="text" placeholder="اكتب اسمك" />
+              </div>
+              <div class="field">
+                <label>رقم الجوال</label>
+                <input type="tel" placeholder="05xxxxxxxx" />
+              </div>
+              <div class="field">
+                <label>وصف مختصر للمشروع</label>
+                <textarea rows="4" placeholder="وش تحتاج؟ إعلانات؟ تصميم؟ محتوى؟"></textarea>
+              </div>
+
+              <div class="contact__actions">
+                <a class="btn btn--primary btn--block" href="tel:+967774887397">إرسال</a>
+                <a class="btn btn--ghost btn--block" href="https://wa.me/967774887397">واتساب</a>
+              </div>
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+
+<section class="portfolio">
+  <h2>أعمال نعتز بها</h2>
+  <div class="works-grid">
+    
+      <a class="work-card" href="works/%D8%A7%D8%B9%D9%85%D8%A7%D9%84%20%D9%83%D9%88%D9%86%D8%A7%D9%86/1770677991816.jpg" target="_blank" rel="noopener">
+      <img src="works/%D8%A7%D8%B9%D9%85%D8%A7%D9%84%20%D9%83%D9%88%D9%86%D8%A7%D9%86/1770677991816.jpg" alt="عمل 1" loading="lazy" />
+      <div class="work-caption">عمل 1</div>
+    </a>
+    <a class="work-card" href="works/%D8%A7%D8%B9%D9%85%D8%A7%D9%84%20%D9%83%D9%88%D9%86%D8%A7%D9%86/1770677994831.jpg" target="_blank" rel="noopener">
+      <img src="works/%D8%A7%D8%B9%D9%85%D8%A7%D9%84%20%D9%83%D9%88%D9%86%D8%A7%D9%86/1770677994831.jpg" alt="عمل 2" loading="lazy" />
+      <div class="work-caption">عمل 2</div>
+    </a>
+    <a class="work-card" href="works/%D8%A7%D8%B9%D9%85%D8%A7%D9%84%20%D9%83%D9%88%D9%86%D8%A7%D9%86/1770677997113.jpg" target="_blank" rel="noopener">
+      <img src="works/%D8%A7%D8%B9%D9%85%D8%A7%D9%84%20%D9%83%D9%88%D9%86%D8%A7%D9%86/1770677997113.jpg" alt="عمل 3" loading="lazy" />
+      <div class="work-caption">عمل 3</div>
+    </a>
+    <a class="work-card" href="works/%D8%A7%D8%B9%D9%85%D8%A7%D9%84%20%D9%83%D9%88%D9%86%D8%A7%D9%86/1770677999523.jpg" target="_blank" rel="noopener">
+      <img src="works/%D8%A7%D8%B9%D9%85%D8%A7%D9%84%20%D9%83%D9%88%D9%86%D8%A7%D9%86/1770677999523.jpg" alt="عمل 4" loading="lazy" />
+      <div class="work-caption">عمل 4</div>
+    </a>
+    <a class="work-card" href="works/%D8%A7%D8%B9%D9%85%D8%A7%D9%84%20%D9%83%D9%88%D9%86%D8%A7%D9%86/1770678001694.jpg" target="_blank" rel="noopener">
+      <img src="works/%D8%A7%D8%B9%D9%85%D8%A7%D9%84%20%D9%83%D9%88%D9%86%D8%A7%D9%86/1770678001694.jpg" alt="عمل 5" loading="lazy" />
+      <div class="work-caption">عمل 5</div>
+    </a>
+    <a class="work-card" href="works/%D8%A7%D8%B9%D9%85%D8%A7%D9%84%20%D9%83%D9%88%D9%86%D8%A7%D9%86/1770678003990.jpg" target="_blank" rel="noopener">
+      <img src="works/%D8%A7%D8%B9%D9%85%D8%A7%D9%84%20%D9%83%D9%88%D9%86%D8%A7%D9%86/1770678003990.jpg" alt="عمل 6" loading="lazy" />
+      <div class="work-caption">عمل 6</div>
+    </a>
+    <a class="work-card" href="works/%D8%A7%D8%B9%D9%85%D8%A7%D9%84%20%D9%83%D9%88%D9%86%D8%A7%D9%86/1770678006317.jpg" target="_blank" rel="noopener">
+      <img src="works/%D8%A7%D8%B9%D9%85%D8%A7%D9%84%20%D9%83%D9%88%D9%86%D8%A7%D9%86/1770678006317.jpg" alt="عمل 7" loading="lazy" />
+      <div class="work-caption">عمل 7</div>
+    </a>
+    <a class="work-card" href="works/%D8%A7%D8%B9%D9%85%D8%A7%D9%84%20%D9%83%D9%88%D9%86%D8%A7%D9%86/1770678008982.jpg" target="_blank" rel="noopener">
+      <img src="works/%D8%A7%D8%B9%D9%85%D8%A7%D9%84%20%D9%83%D9%88%D9%86%D8%A7%D9%86/1770678008982.jpg" alt="عمل 8" loading="lazy" />
+      <div class="work-caption">عمل 8</div>
+    </a>
+    <a class="work-card" href="works/%D8%A7%D8%B9%D9%85%D8%A7%D9%84%20%D9%83%D9%88%D9%86%D8%A7%D9%86/1770678015747.jpg" target="_blank" rel="noopener">
+      <img src="works/%D8%A7%D8%B9%D9%85%D8%A7%D9%84%20%D9%83%D9%88%D9%86%D8%A7%D9%86/1770678015747.jpg" alt="عمل 9" loading="lazy" />
+      <div class="work-caption">عمل 9</div>
+    </a>
+    <a class="work-card" href="works/%D8%A7%D8%B9%D9%85%D8%A7%D9%84%20%D9%83%D9%88%D9%86%D8%A7%D9%86/1770678018487.jpg" target="_blank" rel="noopener">
+      <img src="works/%D8%A7%D8%B9%D9%85%D8%A7%D9%84%20%D9%83%D9%88%D9%86%D8%A7%D9%86/1770678018487.jpg" alt="عمل 10" loading="lazy" />
+      <div class="work-caption">عمل 10</div>
+    </a>
+    <a class="work-card" href="works/%D8%A7%D8%B9%D9%85%D8%A7%D9%84%20%D9%83%D9%88%D9%86%D8%A7%D9%86/1770678025046.jpg" target="_blank" rel="noopener">
+      <img src="works/%D8%A7%D8%B9%D9%85%D8%A7%D9%84%20%D9%83%D9%88%D9%86%D8%A7%D9%86/1770678025046.jpg" alt="عمل 11" loading="lazy" />
+      <div class="work-caption">عمل 11</div>
+    </a>
+    <a class="work-card" href="works/%D8%A7%D8%B9%D9%85%D8%A7%D9%84%20%D9%83%D9%88%D9%86%D8%A7%D9%86/1770678032950.jpg" target="_blank" rel="noopener">
+      <img src="works/%D8%A7%D8%B9%D9%85%D8%A7%D9%84%20%D9%83%D9%88%D9%86%D8%A7%D9%86/1770678032950.jpg" alt="عمل 12" loading="lazy" />
+      <div class="work-caption">عمل 12</div>
+    </a>
+    <a class="work-card" href="works/%D8%A7%D8%B9%D9%85%D8%A7%D9%84%20%D9%83%D9%88%D9%86%D8%A7%D9%86/1770678036261.jpg" target="_blank" rel="noopener">
+      <img src="works/%D8%A7%D8%B9%D9%85%D8%A7%D9%84%20%D9%83%D9%88%D9%86%D8%A7%D9%86/1770678036261.jpg" alt="عمل 13" loading="lazy" />
+      <div class="work-caption">عمل 13</div>
+    </a>
+    <a class="work-card" href="works/%D8%A7%D8%B9%D9%85%D8%A7%D9%84%20%D9%83%D9%88%D9%86%D8%A7%D9%86/1770678039347.jpg" target="_blank" rel="noopener">
+      <img src="works/%D8%A7%D8%B9%D9%85%D8%A7%D9%84%20%D9%83%D9%88%D9%86%D8%A7%D9%86/1770678039347.jpg" alt="عمل 14" loading="lazy" />
+      <div class="work-caption">عمل 14</div>
+    </a>
+    <a class="work-card" href="works/%D8%A7%D8%B9%D9%85%D8%A7%D9%84%20%D9%83%D9%88%D9%86%D8%A7%D9%86/1770678178767.jpg" target="_blank" rel="noopener">
+      <img src="works/%D8%A7%D8%B9%D9%85%D8%A7%D9%84%20%D9%83%D9%88%D9%86%D8%A7%D9%86/1770678178767.jpg" alt="عمل 15" loading="lazy" />
+      <div class="work-caption">عمل 15</div>
+    </a>
+    <a class="work-card" href="works/%D8%A7%D8%B9%D9%85%D8%A7%D9%84%20%D9%83%D9%88%D9%86%D8%A7%D9%86/1770678183075.jpg" target="_blank" rel="noopener">
+      <img src="works/%D8%A7%D8%B9%D9%85%D8%A7%D9%84%20%D9%83%D9%88%D9%86%D8%A7%D9%86/1770678183075.jpg" alt="عمل 16" loading="lazy" />
+      <div class="work-caption">عمل 16</div>
+    </a>
+    <a class="work-card" href="works/%D8%A7%D8%B9%D9%85%D8%A7%D9%84%20%D9%83%D9%88%D9%86%D8%A7%D9%86/1770678185316.jpg" target="_blank" rel="noopener">
+      <img src="works/%D8%A7%D8%B9%D9%85%D8%A7%D9%84%20%D9%83%D9%88%D9%86%D8%A7%D9%86/1770678185316.jpg" alt="عمل 17" loading="lazy" />
+      <div class="work-caption">عمل 17</div>
+    </a>
+    <a class="work-card" href="works/%D8%A7%D8%B9%D9%85%D8%A7%D9%84%20%D9%83%D9%88%D9%86%D8%A7%D9%86/1770678187217.jpg" target="_blank" rel="noopener">
+      <img src="works/%D8%A7%D8%B9%D9%85%D8%A7%D9%84%20%D9%83%D9%88%D9%86%D8%A7%D9%86/1770678187217.jpg" alt="عمل 18" loading="lazy" />
+      <div class="work-caption">عمل 18</div>
+    </a>
+    <a class="work-card" href="works/%D8%A7%D8%B9%D9%85%D8%A7%D9%84%20%D9%83%D9%88%D9%86%D8%A7%D9%86/1770678189683.jpg" target="_blank" rel="noopener">
+      <img src="works/%D8%A7%D8%B9%D9%85%D8%A7%D9%84%20%D9%83%D9%88%D9%86%D8%A7%D9%86/1770678189683.jpg" alt="عمل 19" loading="lazy" />
+      <div class="work-caption">عمل 19</div>
+    </a>
+    <a class="work-card" href="works/%D8%A7%D8%B9%D9%85%D8%A7%D9%84%20%D9%83%D9%88%D9%86%D8%A7%D9%86/1770678192117.jpg" target="_blank" rel="noopener">
+      <img src="works/%D8%A7%D8%B9%D9%85%D8%A7%D9%84%20%D9%83%D9%88%D9%86%D8%A7%D9%86/1770678192117.jpg" alt="عمل 20" loading="lazy" />
+      <div class="work-caption">عمل 20</div>
+    </a>
+    <a class="work-card" href="works/%D8%A7%D8%B9%D9%85%D8%A7%D9%84%20%D9%83%D9%88%D9%86%D8%A7%D9%86/1770678195009.jpg" target="_blank" rel="noopener">
+      <img src="works/%D8%A7%D8%B9%D9%85%D8%A7%D9%84%20%D9%83%D9%88%D9%86%D8%A7%D9%86/1770678195009.jpg" alt="عمل 21" loading="lazy" />
+      <div class="work-caption">عمل 21</div>
+    </a>
+    <a class="work-card" href="works/%D8%A7%D8%B9%D9%85%D8%A7%D9%84%20%D9%83%D9%88%D9%86%D8%A7%D9%86/1770678197444.jpg" target="_blank" rel="noopener">
+      <img src="works/%D8%A7%D8%B9%D9%85%D8%A7%D9%84%20%D9%83%D9%88%D9%86%D8%A7%D9%86/1770678197444.jpg" alt="عمل 22" loading="lazy" />
+      <div class="work-caption">عمل 22</div>
+    </a>
+    <a class="work-card" href="works/%D8%A7%D8%B9%D9%85%D8%A7%D9%84%20%D9%83%D9%88%D9%86%D8%A7%D9%86/1770678199575.jpg" target="_blank" rel="noopener">
+      <img src="works/%D8%A7%D8%B9%D9%85%D8%A7%D9%84%20%D9%83%D9%88%D9%86%D8%A7%D9%86/1770678199575.jpg" alt="عمل 23" loading="lazy" />
+      <div class="work-caption">عمل 23</div>
+    </a>
+    <a class="work-card" href="works/%D8%A7%D8%B9%D9%85%D8%A7%D9%84%20%D9%83%D9%88%D9%86%D8%A7%D9%86/1770678202628.jpg" target="_blank" rel="noopener">
+      <img src="works/%D8%A7%D8%B9%D9%85%D8%A7%D9%84%20%D9%83%D9%88%D9%86%D8%A7%D9%86/1770678202628.jpg" alt="عمل 24" loading="lazy" />
+      <div class="work-caption">عمل 24</div>
+    </a>
+    <a class="work-card" href="works/%D8%A7%D8%B9%D9%85%D8%A7%D9%84%20%D9%83%D9%88%D9%86%D8%A7%D9%86/1770678204840.jpg" target="_blank" rel="noopener">
+      <img src="works/%D8%A7%D8%B9%D9%85%D8%A7%D9%84%20%D9%83%D9%88%D9%86%D8%A7%D9%86/1770678204840.jpg" alt="عمل 25" loading="lazy" />
+      <div class="work-caption">عمل 25</div>
+    </a>
+    <a class="work-card" href="works/%D8%A7%D8%B9%D9%85%D8%A7%D9%84%20%D9%83%D9%88%D9%86%D8%A7%D9%86/1770678206932.jpg" target="_blank" rel="noopener">
+      <img src="works/%D8%A7%D8%B9%D9%85%D8%A7%D9%84%20%D9%83%D9%88%D9%86%D8%A7%D9%86/1770678206932.jpg" alt="عمل 26" loading="lazy" />
+      <div class="work-caption">عمل 26</div>
+    </a>
+    <a class="work-card" href="works/%D8%A7%D8%B9%D9%85%D8%A7%D9%84%20%D9%83%D9%88%D9%86%D8%A7%D9%86/1770678276420.jpg" target="_blank" rel="noopener">
+      <img src="works/%D8%A7%D8%B9%D9%85%D8%A7%D9%84%20%D9%83%D9%88%D9%86%D8%A7%D9%86/1770678276420.jpg" alt="عمل 27" loading="lazy" />
+      <div class="work-caption">عمل 27</div>
+    </a>
+    <a class="work-card" href="works/%D8%A7%D8%B9%D9%85%D8%A7%D9%84%20%D9%83%D9%88%D9%86%D8%A7%D9%86/1770678280127.jpg" target="_blank" rel="noopener">
+      <img src="works/%D8%A7%D8%B9%D9%85%D8%A7%D9%84%20%D9%83%D9%88%D9%86%D8%A7%D9%86/1770678280127.jpg" alt="عمل 28" loading="lazy" />
+      <div class="work-caption">عمل 28</div>
+    </a>
+    <a class="work-card" href="works/%D8%A7%D8%B9%D9%85%D8%A7%D9%84%20%D9%83%D9%88%D9%86%D8%A7%D9%86/1770678282423.jpg" target="_blank" rel="noopener">
+      <img src="works/%D8%A7%D8%B9%D9%85%D8%A7%D9%84%20%D9%83%D9%88%D9%86%D8%A7%D9%86/1770678282423.jpg" alt="عمل 29" loading="lazy" />
+      <div class="work-caption">عمل 29</div>
+    </a>
+    <a class="work-card" href="works/%D8%A7%D8%B9%D9%85%D8%A7%D9%84%20%D9%83%D9%88%D9%86%D8%A7%D9%86/1770678285400.jpg" target="_blank" rel="noopener">
+      <img src="works/%D8%A7%D8%B9%D9%85%D8%A7%D9%84%20%D9%83%D9%88%D9%86%D8%A7%D9%86/1770678285400.jpg" alt="عمل 30" loading="lazy" />
+      <div class="work-caption">عمل 30</div>
+    </a>
+    <a class="work-card" href="works/%D8%A7%D8%B9%D9%85%D8%A7%D9%84%20%D9%83%D9%88%D9%86%D8%A7%D9%86/1770678287746.jpg" target="_blank" rel="noopener">
+      <img src="works/%D8%A7%D8%B9%D9%85%D8%A7%D9%84%20%D9%83%D9%88%D9%86%D8%A7%D9%86/1770678287746.jpg" alt="عمل 31" loading="lazy" />
+      <div class="work-caption">عمل 31</div>
+    </a>
+    <a class="work-card" href="works/%D8%A7%D8%B9%D9%85%D8%A7%D9%84%20%D9%83%D9%88%D9%86%D8%A7%D9%86/1770678289963.jpg" target="_blank" rel="noopener">
+      <img src="works/%D8%A7%D8%B9%D9%85%D8%A7%D9%84%20%D9%83%D9%88%D9%86%D8%A7%D9%86/1770678289963.jpg" alt="عمل 32" loading="lazy" />
+      <div class="work-caption">عمل 32</div>
+    </a>
+    <a class="work-card" href="works/%D8%A7%D8%B9%D9%85%D8%A7%D9%84%20%D9%83%D9%88%D9%86%D8%A7%D9%86/1770678292014.jpg" target="_blank" rel="noopener">
+      <img src="works/%D8%A7%D8%B9%D9%85%D8%A7%D9%84%20%D9%83%D9%88%D9%86%D8%A7%D9%86/1770678292014.jpg" alt="عمل 33" loading="lazy" />
+      <div class="work-caption">عمل 33</div>
+    </a>
+    <a class="work-card" href="works/%D8%A7%D8%B9%D9%85%D8%A7%D9%84%20%D9%83%D9%88%D9%86%D8%A7%D9%86/1770678295247.jpg" target="_blank" rel="noopener">
+      <img src="works/%D8%A7%D8%B9%D9%85%D8%A7%D9%84%20%D9%83%D9%88%D9%86%D8%A7%D9%86/1770678295247.jpg" alt="عمل 34" loading="lazy" />
+      <div class="work-caption">عمل 34</div>
+    </a>
+    <a class="work-card" href="works/%D8%A7%D8%B9%D9%85%D8%A7%D9%84%20%D9%83%D9%88%D9%86%D8%A7%D9%86/1770678297339.jpg" target="_blank" rel="noopener">
+      <img src="works/%D8%A7%D8%B9%D9%85%D8%A7%D9%84%20%D9%83%D9%88%D9%86%D8%A7%D9%86/1770678297339.jpg" alt="عمل 35" loading="lazy" />
+      <div class="work-caption">عمل 35</div>
+    </a>
+    <a class="work-card" href="works/%D8%A7%D8%B9%D9%85%D8%A7%D9%84%20%D9%83%D9%88%D9%86%D8%A7%D9%86/1770678299145.jpg" target="_blank" rel="noopener">
+      <img src="works/%D8%A7%D8%B9%D9%85%D8%A7%D9%84%20%D9%83%D9%88%D9%86%D8%A7%D9%86/1770678299145.jpg" alt="عمل 36" loading="lazy" />
+      <div class="work-caption">عمل 36</div>
+    </a>
+    <a class="work-card" href="works/%D8%A7%D8%B9%D9%85%D8%A7%D9%84%20%D9%83%D9%88%D9%86%D8%A7%D9%86/1770678301739.jpg" target="_blank" rel="noopener">
+      <img src="works/%D8%A7%D8%B9%D9%85%D8%A7%D9%84%20%D9%83%D9%88%D9%86%D8%A7%D9%86/1770678301739.jpg" alt="عمل 37" loading="lazy" />
+      <div class="work-caption">عمل 37</div>
+    </a>
+    <a class="work-card" href="works/%D8%A7%D8%B9%D9%85%D8%A7%D9%84%20%D9%83%D9%88%D9%86%D8%A7%D9%86/1770678304807.jpg" target="_blank" rel="noopener">
+      <img src="works/%D8%A7%D8%B9%D9%85%D8%A7%D9%84%20%D9%83%D9%88%D9%86%D8%A7%D9%86/1770678304807.jpg" alt="عمل 38" loading="lazy" />
+      <div class="work-caption">عمل 38</div>
+    </a>
+    <a class="work-card" href="works/%D8%A7%D8%B9%D9%85%D8%A7%D9%84%20%D9%83%D9%88%D9%86%D8%A7%D9%86/1770678306909.jpg" target="_blank" rel="noopener">
+      <img src="works/%D8%A7%D8%B9%D9%85%D8%A7%D9%84%20%D9%83%D9%88%D9%86%D8%A7%D9%86/1770678306909.jpg" alt="عمل 39" loading="lazy" />
+      <div class="work-caption">عمل 39</div>
+    </a>
+    <a class="work-card" href="works/%D8%A7%D8%B9%D9%85%D8%A7%D9%84%20%D9%83%D9%88%D9%86%D8%A7%D9%86/1770678308873.jpg" target="_blank" rel="noopener">
+      <img src="works/%D8%A7%D8%B9%D9%85%D8%A7%D9%84%20%D9%83%D9%88%D9%86%D8%A7%D9%86/1770678308873.jpg" alt="عمل 40" loading="lazy" />
+      <div class="work-caption">عمل 40</div>
+    </a>
+    <a class="work-card" href="works/%D8%A7%D8%B9%D9%85%D8%A7%D9%84%20%D9%83%D9%88%D9%86%D8%A7%D9%86/1770678310950.jpg" target="_blank" rel="noopener">
+      <img src="works/%D8%A7%D8%B9%D9%85%D8%A7%D9%84%20%D9%83%D9%88%D9%86%D8%A7%D9%86/1770678310950.jpg" alt="عمل 41" loading="lazy" />
+      <div class="work-caption">عمل 41</div>
+    </a>
+  </div>
+</section>
+
+
+</main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div>© <span id="y"></span> المسوق كونان</div>
+      <div class="footer__links">
+        <a href="#services">الخدمات</a>
+        <a href="#contact">تواصل</a>
+      </div>
+    </div>
+    <script>
+      document.getElementById('y').textContent = new Date().getFullYear();
+    </script>
+  </footer>
 </body>
 </html>
